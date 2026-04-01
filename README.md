@@ -1,2 +1,2 @@
 # latin-verb-chart
-Full chart of Latin indicative and subjunctive moods
+Chart of all latin verb forms in indicative and subjunctive moods
