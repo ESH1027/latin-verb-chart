@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics (deferred) -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-90K3GM0K47"></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-90K3GM0K47');
+    </script>
+
+    <!-- Page Info -->
+    <title>Latin Verb Conjugation Chart</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Free interactive Latin verb conjugation chart. Covers all indicative and subjunctive forms, active and passive voices, present and perfect systems across all tenses." />
+
+    <!-- Open Graph (Reddit/Social Preview) -->
+    <meta property="og:title" content="Interactive Latin Verb Conjugation Chart" />
+    <meta property="og:description" content="Free interactive chart covering all Latin verb conjugations — indicative and subjunctive moods, active and passive voices, all tenses including perfect, pluperfect, and future perfect." />
+    <meta property="og:url" content="https://esh1027.github.io/latin-verb-chart/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Latin Verb Chart" />
+    <meta property="og:image" content="https://esh1027.github.io/latin-verb-chart/latin-verb-chart.png" />
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+
+        data.addRows([
+          // Root node
+          [{v: 'Latin Verbs', f: '<div style="font-size:22px; white-space:nowrap"><b>Latin Verbs</b></div>'}, ''],
+
+          // Main Moods
+          [{v: 'Indicative', f: '<b>Indicative</b>'}, 'Latin Verbs'],
+          [{v: 'Subjunctive', f: '<b>Subjunctive</b>'}, 'Latin Verbs'],
+
+          // Voices under Indicative
+          [{v: 'Indicative Active', f: '<b>Active</b>'}, 'Indicative'],
+          [{v: 'Indicative Passive', f: '<b>Passive</b>'}, 'Indicative'],
+
+          // Present & Perfect Systems under Active Voice
+          [{v: 'Active Present System', f: '<div style="white-space:nowrap"><b>Present System</b><br>(2nd PP Laud<s>are</s> + Ending)</div>'}, 'Indicative Active'],
+          [{v: 'Active Perfect System', f: '<div style="white-space:nowrap"><b>Perfect System</b><br>(3rd PP Laudav<s>i</s> + Ending)</div>'}, 'Indicative Active'],
+
+          // Tenses under Active Present System
+          [{v: 'Active Present', f: '<b>Present</b>'}, 'Active Present System'],
+          [{v: 'Active Imperfect', f: '<b>Imperfect</b>'}, 'Active Present System'],
+          [{v: 'Active Future', f: '<b>Future</b>'}, 'Active Present System'],
+
+          // Conjugations for Active Present, Imperfect, and Future
+          [{v: 'Indicative Active Present', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-o<br>-s<br>-t<br><br>-mus<br>-tis<br>-nt</div>'}, 'Active Present'],
+          [{v: 'Indicative Active Imperfect', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-bam<br>-bas<br>-bat<br><br>-bamus<br>-batis<br>-bant</div>'}, 'Active Imperfect'],
+          [{v: 'Indicative Active Future', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-bo<br>-bis<br>-bit<br><br>-bimus<br>-bitis<br>-bunt</div>'}, 'Active Future'],
+
+          // Tenses under Active Perfect System
+          [{v: 'Active Perfect', f: '<b>Perfect</b>'}, 'Active Perfect System'],
+          [{v: 'Active Pluperfect', f: '<b>Pluperfect</b>'}, 'Active Perfect System'],
+          [{v: 'Active Future Perfect', f: '<div style="white-space:nowrap"><b>Future Perfect</b>'}, 'Active Perfect System'],
+
+          // Conjugations for Perfect, Pluperfect, and Future Perfect
+          [{v: 'Indicative Active Perfect', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-i<br>-isti<br>-it<br><br>-imus<br>-istis<br>-erunt</div>'}, 'Active Perfect'],
+          [{v: 'Indicative Active Pluperfect', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-eram<br>-eras<br>-erat<br><br>-eramus<br>-eratis<br>-erant</div>'}, 'Active Pluperfect'],
+          [{v: 'Indicative Active Future Perfect', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-ero<br>-eris<br>-erit<br><br>-erimus<br>-eritis<br>-erint</div>'}, 'Active Future Perfect'],
+
+          // Present & Perfect Systems under Passive Voice
+          [{v: 'Passive Present System', f: '<div style="white-space:nowrap"><b>Present System</b><br>(2nd PP Laud<s>are</s> + Ending)</div>'}, 'Indicative Passive'],
+          [{v: 'Passive Perfect System', f: '<div style="white-space:nowrap"><b>Perfect System</b><br>(4th PP Laudat<s>us</s> + Participle + Sum)</div>'}, 'Indicative Passive'],
+
+          // Tenses under Passive Present System
+          [{v: 'Passive Present', f: '<b>Present</b>'}, 'Passive Present System'],
+          [{v: 'Passive Imperfect', f: '<b>Imperfect</b>'}, 'Passive Present System'],
+          [{v: 'Passive Future', f: '<b>Future</b>'}, 'Passive Present System'],
+
+          // Tenses under Passive Perfect System
+          [{v: 'Passive Perfect', f: '<b>Perfect</b>'}, 'Passive Perfect System'],
+          [{v: 'Passive Pluperfect', f: '<b>Pluperfect</b>'}, 'Passive Perfect System'],
+          [{v: 'Future Perfect', f: '<div style="white-space:nowrap"><b>Future Perfect</b></div>'}, 'Passive Perfect System'],
+
+          // Conjugations for Passive Present, Imperfect, and Future
+          [{v: 'Indicative Passive Present', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-or<br>-ris<br>-tur<br><br>-mur<br>-mini<br>-ntur</div>'}, 'Passive Present'],
+          [{v: 'Indicative Passive Imperfect', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-bar<br>-baris<br>-batur<br><br>-bamur<br>-bamini<br>-bantur</div>'}, 'Passive Imperfect'],
+          [{v: 'Indicative Passive Future', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-bor<br>-beris<br>-bitur<br><br>-bimur<br>-bimini<br>-buntur</div>'}, 'Passive Future'],
+
+          // Conjugations for Perfect, Pluperfect, and Future Perfect
+          [{v: 'Indicative Passive Perfect Singular', f: '<div style="background-color:#FFFFFF"><b>Singular</b><br>(us,a,um)<br><br>+sum<br>+es<br>+est<br>&nbsp</div>'}, 'Passive Perfect'],
+          [{v: 'Indicative Passive Perfect Plural', f: '<div style="background-color:#FFFFFF"><b>Plural</b><br>(i,ae,a)<br><br>+sumus<br>+estis<br>+sunt<br>&nbsp</div>'}, 'Passive Perfect'],
+          [{v: 'Indicative Passive Pluperfect Singular', f: '<div style="background-color:#FFFFFF"><b>Singular</b><br>(us,a,um)<br><br>+eram<br>+eras<br>+erat<br>&nbsp</div>'}, 'Passive Pluperfect'],
+          [{v: 'Indicative Passive Pluperfect Plural', f: '<div style="background-color:#FFFFFF"><b>Plural</b><br>(i,ae,a)<br><br>+eramus<br>+eratis<br>+erant<br>&nbsp</div>'}, 'Passive Pluperfect'],
+          [{v: 'Indicative Passive Future Perfect Singular', f: '<div style="background-color:#FFFFFF"><b>Singular</b><br>(us,a,um)<br><br>+ero<br>+eris<br>+erit<br>&nbsp</div>'}, 'Future Perfect'],
+          [{v: 'Indicative Passive Future Perfect Plural', f: '<div style="background-color:#FFFFFF"><b>Plural</b><br>(i,ae,a)<br><br>+erimus<br>+eritis<br>+erunt<br>&nbsp</div>'}, 'Future Perfect'],
+
+          // Voices under Subjunctive
+          [{v: 'Subjunctive Active', f: '<b>Active</b>'}, 'Subjunctive'],
+          [{v: 'Subjunctive Passive', f: '<b>Passive</b>'}, 'Subjunctive'],
+
+          // Present & Perfect Systems under Subjunctive Active Voice
+          [{v: 'Subjunctive Active Present System', f: '<div style="white-space:nowrap"><b>Present System</b></div>'}, 'Subjunctive Active'],
+          [{v: 'Subjunctive Active Perfect System', f: '<div style="white-space:nowrap"><b>Perfect System</b><br>(2nd PP Laudav<s>i</s> + Ending)</div>'}, 'Subjunctive Active'],
+
+          // Tenses under Subjunctive Active Present System
+          [{v: 'Subjunctive Active Present', f: '<div style="white-space:nowrap"><b>Present</b><br>(2nd PP Laud<s>are</s> + <u>Conjugation Vowel</u> + Ending)</div>'}, 'Subjunctive Active Present System'],
+          [{v: 'Subjunctive Active Imperfect', f: '<div style="white-space:nowrap"><b>Imperfect</b><br>(2nd PP laudare + Ending)</div>'}, 'Subjunctive Active Present System'],
+
+          // Conjugations for Subjunctive Active Present, Imperfect
+          [{v: 'Subjunctive Active Present Chart', f: '<div style="background-color:#FFFFFF">-<u>e</u>m<br>-<u>e</u>s<br>-<u>e</u>t<br><br>-<u>e</u>mus<br>-<u>e</u>tis<br>-<u>e</u>nt</div>'}, 'Subjunctive Active Present'],
+          [{v: 'Subjunctive Active Imperfect Chart', f: '<div style="background-color:#FFFFFF">-m<br>-s<br>-t<br><br>-mus<br>-tis<br>-nt</div>'}, 'Subjunctive Active Imperfect'],
+
+          // Tenses under Subjunctive Active Perfect System
+          [{v: 'Subjunctive Active Perfect', f: '<b>Perfect</b>'}, 'Subjunctive Active Perfect System'],
+          [{v: 'Subjunctive Active Pluperfect', f: '<b>Pluperfect</b>'}, 'Subjunctive Active Perfect System'],
+
+          // Conjugations for Subjunctive Active Perfect, Pluperfect
+          [{v: 'Subjunctive Active Perfect Chart', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-erim<br>-eris<br>-erit<br><br>-erimus<br>-eritis<br>-erint</div>'}, 'Subjunctive Active Perfect'],
+          [{v: 'Subjunctive Active Pluperfect Chart', f: '<div style="background-color:#FFFFFF; padding:5px; white-space:nowrap;">-issem<br>-isses<br>-isset<br><br>-issemus<br>-issetis<br>-issent</div>'}, 'Subjunctive Active Pluperfect'],
+
+          // Present & Perfect Systems under Subjunctive Passive Voice
+          [{v: 'Subjunctive Passive Present System', f: '<div style="white-space:nowrap"><b>Present System</b></div>'}, 'Subjunctive Passive'],
+          [{v: 'Subjunctive Passive Perfect System', f: '<div style="white-space:nowrap"><b>Perfect System</b><br>(4th PP Laudatus + Participle + Sum(Subjunctive))</div>'}, 'Subjunctive Passive'],
+
+          // Tenses under Subjunctive Passive Present System
+          [{v: 'Subjunctive Passive Present', f: '<div style="white-space:nowrap"><b>Present</b><br>(2nd PP Laud<s>are</s> + <u>Conjugation Vowel</u> + Ending)</div>'}, 'Subjunctive Passive Present System'],
+          [{v: 'Subjunctive Passive Imperfect', f: '<div style="white-space:nowrap"><b>Imperfect</b><br>(2nd PP laudare + Ending)</div>'}, 'Subjunctive Passive Present System'],
+
+          // Conjugations for Subjunctive Passive Present, Imperfect
+          [{v: 'Subjunctive Passive Present Chart', f: '<div style="background-color:#FFFFFF">-<u>e</u>r<br>-<u>e</u>ris<br>-<u>e</u>tur<br><br>-<u>e</u>mur<br>-<u>e</u>mini<br>-<u>e</u>ntur</div>'}, 'Subjunctive Passive Present'],
+          [{v: 'Subjunctive Passive Imperfect Chart', f: '<div style="background-color:#FFFFFF">-r<br>-ris<br>-tur<br><br>-mur<br>-mini<br>-ntur</div>'}, 'Subjunctive Passive Imperfect'],
+
+          // Tenses under Subjunctive Passive Perfect System
+          [{v: 'Subjunctive Passive Perfect', f: '<div style="white-space:nowrap"><b>Perfect</b></div>'}, 'Subjunctive Passive Perfect System'],
+          [{v: 'Subjunctive Passive Pluperfect', f: '<div style="white-space:nowrap"><b>Pluperfect</b></div>'}, 'Subjunctive Passive Perfect System'],
+
+          // Conjugations for Subjunctive Passive Perfect, Pluperfect
+          [{v: 'Subjunctive Passive Perfect Singular', f: '<div style="background-color:#FFFFFF"><b>Singular</b><br>(us,a,um)<br><br>+sim<br>+sis<br>+sit<br>&nbsp</div>'}, 'Subjunctive Passive Perfect'],
+          [{v: 'Subjunctive Passive Perfect Plural', f: '<div style="background-color:#FFFFFF"><b>Plural</b><br>(i,ae,a)<br><br>+simus<br>+sitis<br>+sint<br>&nbsp</div>'}, 'Subjunctive Passive Perfect'],
+          [{v: 'Subjunctive Passive Pluperfect Singular', f: '<div style="background-color:#FFFFFF"><b>Singular</b><br>(us,a,um)<br><br>+essem<br>+esses<br>+esset<br>&nbsp</div>'}, 'Subjunctive Passive Pluperfect'],
+          [{v: 'Subjunctive Passive Pluperfect Plural', f: '<div style="background-color:#FFFFFF"><b>Plural</b><br>(i,ae,a)<br><br>+essemus<br>+essetis<br>+essent<br>&nbsp</div>'}, 'Subjunctive Passive Pluperfect'],
+
+        ]);
+
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        chart.draw(data, {'allowHtml': true});
+
+        // Auto-fit zoom after chart renders
+        setTimeout(function() {
+          var chartDiv = document.getElementById('chart_div');
+          var chartWidth = chartDiv.scrollWidth;
+          var chartHeight = chartDiv.scrollHeight;
+          var windowWidth = window.innerWidth;
+          var windowHeight = window.innerHeight;
+          var scaleX = windowWidth / chartWidth;
+          var scaleY = windowHeight / chartHeight;
+          var scale = Math.min(scaleX, scaleY);
+          document.body.style.zoom = scale;
+        }, 500);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div"></div>
+    <div style="text-align:center; margin-top:20px; font-size:16px;">
+  <a href="latin-verb-chart.pdf" download>Download Printable PDF Version</a>
+</div>
+  </body>
+</html>
